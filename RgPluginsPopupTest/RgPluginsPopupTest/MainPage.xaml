@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RgPluginsPopupTest"
+             x:Class="RgPluginsPopupTest.MainPage"
+             x:Name="main">
+
+    <StackLayout BindingContext="{x:Reference main}" VerticalOptions="Center">
+        <Button Command="{Binding AlertCommand}" Text="DisplayAlert" />
+        <Button Command="{Binding ActionSheetCommand}" Text="DisplayActionSheet" />
+        <Button Command="{Binding PopupCommand}" Text="Rg.Plugins.Popup" />
+        <Button Command="{Binding TransitionCommand}" Text="Transition"  />
+    </StackLayout>
+
+</ContentPage>

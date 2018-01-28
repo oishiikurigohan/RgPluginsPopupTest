@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="RgPluginsPopupTest.PopUp"
+             x:Name="popup">
+
+    <StackLayout BindingContext="{x:Reference popup}" VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="{Binding ImageTitle.Value}" FontAttributes="Bold,Italic" TextColor="White" HorizontalOptions="Center" />
+        <Image Source="{Binding KumaSource.Value}" />
+        <ActivityIndicator Color="GreenYellow" IsRunning="true" />
+        <ListView BackgroundColor="Pink" ItemsSource="{Binding Items.Value}" />
+        <Button Text="Close" Command="{Binding CloseCommand}" HorizontalOptions="Center" IsVisible="{Binding IsPopup.Value}" />
+        <Button Text="Back" Command="{Binding BackCommand}" HorizontalOptions="Center" IsVisible="{Binding IsPage.Value}" />
+    </StackLayout>
+
+</pages:PopupPage>
